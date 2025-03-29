@@ -9,7 +9,7 @@ import Foundation
 
 
 struct Constants {
-    static let API_KEY = "406ee9f4bfb0ac6660d30d55cbc1a480"
+    static let API_KEY = Config.apiKey
     static let baseURL = "https://api.themoviedb.org"
 }
 
@@ -108,5 +108,4 @@ class APICaller {
 }
 
 
-// https://api.themoviedb.org/3/movie/upcoming?api_key=
 
