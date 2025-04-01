@@ -12,7 +12,7 @@ class UpcomingVC: UIViewController {
     private var titles: [Title] = [Title]()
     
     private let upcomingTable: UITableView = {
-       let table = UITableView()
+        let table = UITableView()
         table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         return table
     }()
@@ -69,6 +69,6 @@ extension UpcomingVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 140
     }
 }
