@@ -16,4 +16,13 @@ struct Config {
         }
         return apiKey
     }()
+    
+    static let youtubeApiKey: String = {
+        guard let path = Bundle.main.path(forResource: "Config", ofType: "plist"),
+              let config = NSDictionary(contentsOfFile: path),
+              let apiKey = config["YOUTUBE_API_KEY"] as? String else {
+            fatalError("Config.plist file or YOUTUBE_API_KEY is not find!")
+        }
+        return apiKey
+    }()
 }
