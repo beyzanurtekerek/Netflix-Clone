@@ -12,7 +12,7 @@ struct YoutubeSearchResponse: Codable {
 }
 
 struct VideoElement: Codable {
-    let id: [IdVideoElement]
+    let id: IdVideoElement
 }
 
 struct IdVideoElement: Codable {
