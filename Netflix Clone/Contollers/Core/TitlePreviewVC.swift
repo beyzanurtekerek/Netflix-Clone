@@ -13,7 +13,7 @@ class TitlePreviewVC: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 22, weight: .bold)
+        label.font = .systemFont(ofSize: 26, weight: .bold)
         label.text = "Harry Potter"
         return label
     }()
@@ -33,7 +33,7 @@ class TitlePreviewVC: UIViewController {
         button.backgroundColor = .red
         button.setTitle("Download", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
         return button
     }()
@@ -61,7 +61,7 @@ class TitlePreviewVC: UIViewController {
             webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            webView.heightAnchor.constraint(equalToConstant: 250)
+            webView.heightAnchor.constraint(equalToConstant: 290)
         ]
         
         let titleLabelConstraints = [
@@ -71,7 +71,8 @@ class TitlePreviewVC: UIViewController {
         
         let overviewLabelConstraints = [
             overviewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
-            overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ]
         
         let downloadButtonConstraints = [
@@ -87,5 +88,14 @@ class TitlePreviewVC: UIViewController {
         NSLayoutConstraint.activate(downloadButtonConstraints)
     }
 
+    
+    func configure(with model: TitlePreviewVM) {
+        titleLabel.text = model.title
+        overviewLabel.text = model.titleOverview
+        
+        guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeView.id.videoId)") else { return }
+        
+        webView.load(URLRequest(url: url))
+    }
     
 }
