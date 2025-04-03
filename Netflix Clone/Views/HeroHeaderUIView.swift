@@ -44,7 +44,7 @@ class HeroHeaderUIView: UIView {
             UIColor.systemBackground.cgColor
         ]
         gradientLayer.frame = bounds
-        layer.addSublayer(gradientLayer)
+        heroImageView.layer.addSublayer(gradientLayer)
     }
     
     override init(frame: CGRect) {

@@ -39,7 +39,7 @@ class HomeVC: UIViewController {
         
         configureNavbar()
         
-        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 550))
         homeFeedTable.tableHeaderView = headerView
         
         configureHeroHeaderView()
@@ -60,28 +60,29 @@ class HomeVC: UIViewController {
 
     private func configureNavbar() {
         
-        var image = UIImage(named: "netflixLogo")
-        image = image?.withRenderingMode(.alwaysOriginal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+//        var image = UIImage(named: "netflixLogo")
+//        image = image?.withRenderingMode(.alwaysOriginal)
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
         
-//        let image = UIImage(named: "netflixLogo")
-//        let imageView = UIImageView(image: image)
-//        imageView.contentMode = .scaleAspectFit
-//        imageView.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        NSLayoutConstraint.activate([
-//            imageView.widthAnchor.constraint(equalToConstant: 40),
-//            imageView.heightAnchor.constraint(equalToConstant: 40)
-//        ])
-//
-//        let logoBarButtonItem = UIBarButtonItem(customView: imageView)
-//        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-//        negativeSpacer.width = -16
-//
-//        navigationItem.leftBarButtonItems = [
-//            negativeSpacer,
-//            logoBarButtonItem
-//        ]
+        let image = UIImage(named: "netflixLogo")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            imageView.widthAnchor.constraint(equalToConstant: 40),
+            imageView.heightAnchor.constraint(equalToConstant: 40)
+        ])
+
+        let logoBarButtonItem = UIBarButtonItem(customView: imageView)
+        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        negativeSpacer.width = -16
+
+        navigationItem.leftBarButtonItems = [
+            negativeSpacer,
+            logoBarButtonItem
+        ]
+        
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
             UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
