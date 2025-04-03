@@ -20,7 +20,7 @@ class HeroHeaderUIView: UIView {
     }()
     
     private let playButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setTitle("Play", for: .normal)
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
@@ -30,7 +30,6 @@ class HeroHeaderUIView: UIView {
     }()
     
     private let heroImageView: UIImageView = {
-       
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -51,9 +50,9 @@ class HeroHeaderUIView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(heroImageView)
-        addGradient()
         addSubview(playButton)
         addSubview(downloadButton)
+        addGradient()
         applyConstraints()
     }
     
@@ -72,6 +71,11 @@ class HeroHeaderUIView: UIView {
         
         NSLayoutConstraint.activate(playButtonConstraints)
         NSLayoutConstraint.activate(downloadButtonConsraints)
+    }
+    
+    public func configure(with model: TitleVM) {
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model.posterURL)") else { return }
+        heroImageView.sd_setImage(with: url, completed: nil)
     }
     
     override func layoutSubviews() {
