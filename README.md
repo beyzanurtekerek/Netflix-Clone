@@ -17,7 +17,7 @@ This project is a Netflix Clone App built using UIKit and Swift. The application
 
 - **Swift**: Main programming language.
 - **UIKit**: For building UI components.
-- **Library**: SSWebImage used for image caching.
+- **Library**: WebKit used for view web content
 - **DataBase**: CoreData used for saving favorites.
 - **API Integration**: Fetching movie and video data from TMDB API and Youtube API.
 - **Auto Layout**: Ensures a responsive and adaptive UI.
@@ -30,7 +30,7 @@ This project is a Netflix Clone App built using UIKit and Swift. The application
    git clone https://github.com/your-username/Netflix-Clone.git
    cd Netflix-Clone
 2. Open the project in Xcode.
-3. Install dependencies if needed (SDWebImage).
+3. Install dependencies if needed (WebKit).
 4. Run the app on a simulator or physical device.
 
 ## API Setup
