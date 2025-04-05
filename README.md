@@ -53,6 +53,7 @@ Note: Create a Config.plist and add the keys I mentioned.
 <img width=200 src="https://github.com/user-attachments/assets/edd01091-b092-4563-8439-77a89384181a"/>
 <img width=200 src="https://github.com/user-attachments/assets/92157ff6-0950-4cc8-ace2-86e04648e5e2"/>
 <img width=200 src="https://github.com/user-attachments/assets/7cb2d59f-438b-4e1e-8014-91dcf0f7340c"/>
+<img width=200 src="https://github.com/user-attachments/assets/b63c43ae-9d94-4b40-ac1f-307c8d4d33f9"/>
 
 #### 2. Upcoming:
 <img width=200 src="https://github.com/user-attachments/assets/6e03e85d-6353-40bb-9a47-6205cf52265c"/>
