@@ -53,16 +53,6 @@
 			path = "Netflix Clone";
 			sourceTree = "<group>";
 		};
-		D8F13DB02D96D5AB00158EFC /* Netflix CloneTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Netflix CloneTests";
-			sourceTree = "<group>";
-		};
-		D8F13DBA2D96D5AB00158EFC /* Netflix CloneUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Netflix CloneUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				D8F13D992D96D5A900158EFC /* Netflix Clone */,
-				D8F13DB02D96D5AB00158EFC /* Netflix CloneTests */,
-				D8F13DBA2D96D5AB00158EFC /* Netflix CloneUITests */,
 				D8F13D982D96D5A900158EFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,9 +140,6 @@
 			dependencies = (
 				D8F13DAF2D96D5AB00158EFC /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				D8F13DB02D96D5AB00158EFC /* Netflix CloneTests */,
-			);
 			name = "Netflix CloneTests";
 			packageProductDependencies = (
 			);
@@ -174,9 +159,6 @@
 			);
 			dependencies = (
 				D8F13DB92D96D5AB00158EFC /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D8F13DBA2D96D5AB00158EFC /* Netflix CloneUITests */,
 			);
 			name = "Netflix CloneUITests";
 			packageProductDependencies = (
