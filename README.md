@@ -47,6 +47,10 @@ To fetch youtube video data, you need to get a Youtube API key:
 
 Note: Create a Config.plist and add the keys I mentioned.
 
+## Future Developments
+- All download buttons must be activated.
+- Home page navigator needs to be fixed
+
 ## Screenshots
 
 #### 1. Home:
